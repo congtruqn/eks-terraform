@@ -8,3 +8,9 @@ Terraform configuration files to provision an EKS cluster on AWS.
 aws eks update-kubeconfig --region ap-southeast-1 --name trutran-cluster
 
 ```
+# Refer
+
+```
+https://hands-on.cloud/how-to-set-up-amazon-eks-cluster-using-terraform/
+
+```

@@ -1,0 +1,5 @@
+kubectl -n dev run postgress-tunnel  --image=alpine/socat    \
+  --expose=true --port=5432   \
+  tcp-listen:5432,fork,reuseaddr tcp-connect:hrm-dev.c2c2ajpsrvvr.ap-southeast-1.rds.amazonaws.com:5432
+
+kubectl -n dev port-forward svc/postgress-tunnel --address 0.0.0.0 5444:5432
