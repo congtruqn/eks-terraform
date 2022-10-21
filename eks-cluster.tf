@@ -56,3 +56,10 @@ module "eks" {
     # }
   }
 }
+module "eks-iam-cluster-autoscaler" {
+  source  = "rhythmictech/eks-iam-cluster-autoscaler/aws"
+  version = "0.1.0"
+  cluster_name         = module.eks.cluster_id
+  issuer_url           = module.eks.cluster_oidc_issuer_url
+  # insert the 2 required variables here
+}
